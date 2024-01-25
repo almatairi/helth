@@ -29,6 +29,7 @@ class CategoryAdmin(admin.ModelAdmin):
     def has_change_permission(self, request, obj=None):
         return request.user.is_superuser
 
+
 class ClientAdmin(admin.ModelAdmin):
     list_display = ["name", "surname"]
 
@@ -38,4 +39,3 @@ admin.site.register(models.Category, CategoryAdmin)
 admin.site.register(models.Client, ClientAdmin)
 admin.site.register(models.Sale)
 admin.site.register(models.ProductSale)
-
